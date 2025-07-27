@@ -1,0 +1,27 @@
+﻿using ProductMicroService.Application.Interfaces;
+using ProductMicroService.Domain.Entities;
+using ProductMicroService.Domain.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProductMicroService.Application.Services;
+
+public class ProductService : IProductService
+{
+	private readonly IProductRepository _repository;
+
+	public ProductService(IProductRepository repository)
+	{
+		_repository = repository;
+	}
+
+	public Task<IEnumerable<Product>> GetAllAsync() => _repository.GetAllAsync();
+	public Task<Product?> GetByIdAsync(int id) => _repository.GetByIdAsync(id);
+	public Task AddAsync(Product product) => _repository.AddAsync(product);
+	public Task UpdateAsync(Product product) => _repository.UpdateAsync(product);
+	public Task DeleteAsync(int id) => _repository.DeleteAsync(id);
+}
+

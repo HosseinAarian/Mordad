@@ -1,0 +1,15 @@
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\bin\Debug\net9.0\ProductMicroService.Application.deps.json
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\bin\Debug\net9.0\ProductMicroService.Application.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\bin\Debug\net9.0\ProductMicroService.Application.pdb
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\bin\Debug\net9.0\ProductMicroService.Domain.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\bin\Debug\net9.0\ProductMicroService.Domain.pdb
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.csproj.AssemblyReference.cache
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.AssemblyInfoInputs.cache
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.AssemblyInfo.cs
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.csproj.CoreCompileInputs.cache
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductM.12C8DE1A.Up2Date
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\refint\ProductMicroService.Application.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ProductMicroService.Application.pdb
+E:\404\Microservice\ProductMicroService\ProductMicroService.Application\obj\Debug\net9.0\ref\ProductMicroService.Application.dll

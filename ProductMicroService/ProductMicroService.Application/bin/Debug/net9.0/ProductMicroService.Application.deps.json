@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "ProductMicroService.Application/1.0.0": {
+        "dependencies": {
+          "ProductMicroService.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ProductMicroService.Application.dll": {}
+        }
+      },
+      "ProductMicroService.Domain/1.0.0": {
+        "runtime": {
+          "ProductMicroService.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProductMicroService.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductMicroService.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

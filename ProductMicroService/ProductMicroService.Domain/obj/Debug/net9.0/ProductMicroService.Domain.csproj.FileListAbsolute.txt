@@ -1,0 +1,11 @@
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\bin\Debug\net9.0\ProductMicroService.Domain.deps.json
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\bin\Debug\net9.0\ProductMicroService.Domain.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\bin\Debug\net9.0\ProductMicroService.Domain.pdb
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ProductMicroService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ProductMicroService.Domain.AssemblyInfoInputs.cache
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ProductMicroService.Domain.AssemblyInfo.cs
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ProductMicroService.Domain.csproj.CoreCompileInputs.cache
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ProductMicroService.Domain.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\refint\ProductMicroService.Domain.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ProductMicroService.Domain.pdb
+E:\404\Microservice\ProductMicroService\ProductMicroService.Domain\obj\Debug\net9.0\ref\ProductMicroService.Domain.dll
