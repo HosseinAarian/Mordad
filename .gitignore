@@ -17,6 +17,8 @@ obj/
 # Visual Studio folders
 .vs/
 .vscode/
+**/obj/
+
 
 # Other cache files
 *.cache
