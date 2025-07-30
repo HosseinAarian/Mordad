@@ -17,3 +17,4 @@ E:\404\Microservice\ProductMicroService\ProductMicroService.Infrastructure\obj\D
 E:\404\Microservice\ProductMicroService\ProductMicroService.Infrastructure\obj\Debug\net9.0\ProductMicroService.Infrastructure.pdb
 E:\404\Microservice\ProductMicroService\ProductMicroService.Infrastructure\obj\Debug\net9.0\ProductMicroService.Infrastructure.genruntimeconfig.cache
 E:\404\Microservice\ProductMicroService\ProductMicroService.Infrastructure\obj\Debug\net9.0\ref\ProductMicroService.Infrastructure.dll
+E:\404\Microservice\ProductMicroService\ProductMicroService.Infrastructure\obj\Debug\net9.0\ProductMicroService.Infrastructure.sourcelink.json
