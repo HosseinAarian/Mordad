@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ProductMicroService.Application\ProductMicroService.Application.csproj" />
     <ProjectReference Include="..\ProductMicroService.Infrastructure\ProductMicroService.Infrastructure.csproj" />
+    <ProjectReference Include="..\ProductMicroService.Utilities\ProductMicroService.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

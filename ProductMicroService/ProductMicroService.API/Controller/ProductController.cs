@@ -16,6 +16,12 @@ public class ProductController : ControllerBase
 		_service = service;
 	}
 
+	[HttpGet("GetTest")]
+	public IActionResult GetTest()
+	{
+		return Ok("Test Is Ok");
+	}
+
 	[HttpGet]
 	public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 

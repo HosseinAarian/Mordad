@@ -2,6 +2,7 @@
 //http://localhost:5000/swagger/index.html
 using Microsoft.EntityFrameworkCore;
 using ProductMicroService.Infrastructure.Configuration;
+using ProductMicroService.Utilities.MiddleWares;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -13,6 +14,8 @@ ProductMicroServiceConfiguration.Configure(builder.Services, builder.Configurati
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 if (app.Environment.IsDevelopment() || app.Environment.IsStaging() || app.Environment.IsProduction())
 {
 	app.UseSwagger();
