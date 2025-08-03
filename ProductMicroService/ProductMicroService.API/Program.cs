@@ -5,6 +5,8 @@ using ProductMicroService.Infrastructure.Configuration;
 using ProductMicroService.Utilities.ExternalApiServicces;
 using ProductMicroService.Utilities.MiddleWares;
 using Serilog;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
 
 Log.Logger = new LoggerConfiguration()
 	.MinimumLevel.Information()
