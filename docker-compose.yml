@@ -1,0 +1,64 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ProductMicroService.API/Dockerfile
+    ports:
+      - "5000:8080"
+    depends_on:
+      - product-postgres
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__ProductMicroServiceConnection=Host=product-postgres;Port=5432;Database=ProductDb;Username=postgres;Password=hosar860088
+    networks:
+      - micro-network
+
+  product-postgres:
+    image: postgres:17.5
+    restart: always
+    environment:
+      POSTGRES_DB: ProductDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hosar860088
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - micro-network
+
+
+  order-api:
+    build:
+      context: .
+      dockerfile: OrderMicroService.API/Dockerfile   
+    ports:
+      - "5001:8080"
+    depends_on:
+      - order-postgres
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__OrderMicroServiceConnection=Host=order-postgres;Port=5432;Database=OrderDb;Username=postgres;Password=hosar860088
+    networks:
+      - micro-network
+  
+  order-postgres:
+    image: postgres:17.5
+    restart: always
+    environment:
+      POSTGRES_DB: OrderDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hosar860088
+    ports:
+      - "5433:5432"  
+    volumes:
+      - orderpgdata:/var/lib/postgresql/data
+    networks:
+      - micro-network
+
+volumes:
+  pgdata:
+  orderpgdata:
+
+networks:
+  micro-network:
