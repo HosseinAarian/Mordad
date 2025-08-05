@@ -38,3 +38,4 @@ Thumbs.db
 *.opensdf
 *.VC.db
 DocumentLayout*.json
+.env

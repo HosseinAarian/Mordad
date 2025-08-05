@@ -1,64 +1,72 @@
 services:
-  api:
+  product-api:
     build:
       context: .
-      dockerfile: ProductDockerfile
+      dockerfile: Dockerfile.product
     ports:
       - "5000:8080"
     depends_on:
       - product-postgres
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__ProductMicroServiceConnection=Host=product-postgres;Port=5432;Database=ProductDb;Username=postgres;Password=hosar860088
+      - ConnectionStrings__ProductMicroServiceConnection=Host=product-postgres;Port=5432;Database=${PRODUCT_DB};Username=${DB_USER};Password=${DB_PASSWORD}
     networks:
       - micro-network
+    env_file:
+      - .env
 
   product-postgres:
     image: postgres:17.5
     restart: always
     environment:
-      POSTGRES_DB: ProductDb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: hosar860088
+      POSTGRES_DB: ${PRODUCT_DB}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
       - micro-network
+    env_file:
+      - .env
 
 
-  # order-api:
-  #   build:
-  #     context: .
-  #     dockerfile: OrderMicroService/OrderMicroService/Dockerfile   
-  #   ports:
-  #     - "5001:8080"
-  #   depends_on:
-  #     - order-postgres
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ConnectionStrings__OrderMicroServiceConnection=Host=order-postgres;Port=5432;Database=OrderDb;Username=postgres;Password=hosar860088
-  #   networks:
-  #     - micro-network
+  order-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.order
+    ports:
+      - "5001:8080"
+    depends_on:
+      - order-postgres
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__OrderMicroServiceConnection=Host=order-postgres;Port=5432;Database=${ORDER_DB};Username=${DB_USER};Password=${DB_PASSWORD}
+    networks:
+      - micro-network
+    env_file:
+      - .env
   
-  # order-postgres:
-  #   image: postgres:17.5
-  #   restart: always
-  #   environment:
-  #     POSTGRES_DB: OrderDb
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: hosar860088
-  #   ports:
-  #     - "5433:5432"  
-  #   volumes:
-  #     - orderpgdata:/var/lib/postgresql/data
-  #   networks:
-  #     - micro-network
+  order-postgres:
+    image: postgres:17.5
+    restart: always
+    environment:
+      POSTGRES_DB: ${ORDER_DB}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5433:5432"  
+    volumes:
+      - orderpgdata:/var/lib/postgresql/data
+    networks:
+      - micro-network
+    env_file:
+      - .env
 
 volumes:
   pgdata:
-  # orderpgdata:
+  orderpgdata:
 
 networks:
   micro-network:

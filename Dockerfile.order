@@ -8,23 +8,23 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 COPY ["OrderMicroService/OrderMicroService.API/OrderMicroService.csproj", "OrderMicroService.API/"]
-COPY ["OrderMicroService/OrderMicroService.Application/OrderMicroService.Application.csproj", "OrderMicroService.Application/"]
+COPY ["OrderMicroService/OrderMicroServic.Application/OrderMicroServic.Application.csproj", "OrderMicroService.Application/"]
 COPY ["OrderMicroService/OrderMicroService.Domain/OrderMicroService.Domain.csproj", "OrderMicroService.Domain/"]
 COPY ["OrderMicroService/OrderMicroService.Infrastructure/OrderMicroService.Infrastructure.csproj", "OrderMicroService.Infrastructure/"]
 
-RUN dotnet restore "OrderMicroService.API/OrderMicroService.API.csproj"
+RUN dotnet restore "OrderMicroService.API/OrderMicroService.csproj"
 
 COPY OrderMicroService /src/OrderMicroService
 
 WORKDIR "/src/OrderMicroService/OrderMicroService.API"
 
-RUN dotnet build "OrderMicroService.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "OrderMicroService.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "OrderMicroService.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "OrderMicroService.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "OrderMicroService.API.dll"]
+ENTRYPOINT ["dotnet", "OrderMicroService.dll"]
