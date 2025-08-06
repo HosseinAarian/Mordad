@@ -1,0 +1,23 @@
+2025-08-05 23:59:03.175 +03:30 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-08-05 23:59:03.716 +03:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-08-05 23:59:03.728 +03:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-08-05 23:59:03.733 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-08-05 23:59:03.737 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-08-05 23:59:03.744 +03:30 [INF] No migrations were applied. The database is already up to date.
+2025-08-05 23:59:04.133 +03:30 [INF] Now listening on: https://localhost:7182
+2025-08-05 23:59:04.136 +03:30 [INF] Now listening on: http://localhost:5296
+2025-08-05 23:59:04.222 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-05 23:59:04.224 +03:30 [INF] Hosting environment: Development
+2025-08-05 23:59:04.226 +03:30 [INF] Content root path: E:\404\Microservice\ProductMicroService\ProductMicroService.API

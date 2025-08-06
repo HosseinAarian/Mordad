@@ -1,0 +1,47 @@
+//Product https://localhost:7182/swagger/index.html
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/product/GetTest",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7182
+        }
+      ],
+      "UpstreamPathTemplate": "/GateWay/Product/GetTest",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "product"
+    },
+    {
+      "DownstreamPathTemplate": "/api/product/GetAll",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7182
+        }
+      ],
+      "UpstreamPathTemplate": "/GateWay/Product/GetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "product"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/GetAll",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7077
+        }
+      ],
+      "UpstreamPathTemplate": "/GateWay/Order/GetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "order"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7007"
+  }
+}

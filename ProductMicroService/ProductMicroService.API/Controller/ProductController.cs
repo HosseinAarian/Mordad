@@ -22,7 +22,7 @@ public class ProductController : ControllerBase
 		return Ok("Test Is Ok");
 	}
 
-	[HttpGet]
+	[HttpGet("GetAll")]
 	public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
 	[HttpGet("{id}")]
