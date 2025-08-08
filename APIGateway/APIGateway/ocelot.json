@@ -9,10 +9,29 @@
           "Host": "localhost",
           "Port": 7182
         }
+        //,{
+        //  "Host": "localhost",
+        //  "Port": 7183
+        //},
+        //{
+        //  "Host": "localhost",
+        //  "Port": 7184
+        //}
       ],
       "UpstreamPathTemplate": "/GateWay/Product/GetTest",
       "UpstreamHttpMethod": [ "GET" ],
-      "SwaggerKey": "product"
+      "SwaggerKey": "product",
+      //"LoadBalancerOptions": {
+      //  "Type": "RoundRobin",
+
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 5
+        //ClientWhitelist
+      }
     },
     {
       "DownstreamPathTemplate": "/api/product/GetAll",
