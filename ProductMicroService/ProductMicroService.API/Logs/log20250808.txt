@@ -1,0 +1,81 @@
+2025-08-08 15:28:20.061 +03:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-08-08 15:28:20.624 +03:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-08-08 15:28:20.637 +03:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-08-08 15:28:20.642 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-08-08 15:28:20.646 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-08-08 15:28:20.654 +03:30 [INF] No migrations were applied. The database is already up to date.
+2025-08-08 15:28:21.381 +03:30 [INF] Now listening on: https://localhost:7182
+2025-08-08 15:28:21.382 +03:30 [INF] Now listening on: http://localhost:5296
+2025-08-08 15:28:21.473 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 15:28:21.475 +03:30 [INF] Hosting environment: Development
+2025-08-08 15:28:21.477 +03:30 [INF] Content root path: E:\404\Microservice\ProductMicroService\ProductMicroService.API
+2025-08-08 15:28:31.230 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - null null
+2025-08-08 15:28:31.457 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - 200 null text/html;charset=utf-8 232.7106ms
+2025-08-08 15:28:31.483 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - null null
+2025-08-08 15:28:31.488 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.css - null null
+2025-08-08 15:28:31.488 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - null null
+2025-08-08 15:28:31.488 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - null null
+2025-08-08 15:28:31.639 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.js - null null
+2025-08-08 15:28:31.640 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 15:28:31.701 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-08-08 15:28:31.714 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.js - 200 null application/javascript;charset=utf-8 104.4147ms
+2025-08-08 15:28:31.726 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.css - 200 202 text/css 237.2949ms
+2025-08-08 15:28:31.760 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13798 application/javascript; charset=utf-8 120.4271ms
+2025-08-08 15:28:31.770 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - 200 155175 text/css 286.6519ms
+2025-08-08 15:28:31.770 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 281.1864ms
+2025-08-08 15:28:31.779 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - 200 1485750 text/javascript 290.6768ms
+2025-08-08 15:28:31.809 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.144ms
+2025-08-08 15:28:31.931 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-08-08 15:28:31.947 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3653ms
+2025-08-08 15:49:07.380 +03:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-08-08 15:49:07.696 +03:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-08-08 15:49:07.710 +03:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-08-08 15:49:07.714 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-08-08 15:49:07.718 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-08-08 15:49:07.724 +03:30 [INF] No migrations were applied. The database is already up to date.
+2025-08-08 15:49:08.132 +03:30 [INF] Now listening on: https://localhost:7182
+2025-08-08 15:49:08.133 +03:30 [INF] Now listening on: http://localhost:5296
+2025-08-08 15:49:08.217 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 15:49:08.219 +03:30 [INF] Hosting environment: Development
+2025-08-08 15:49:08.221 +03:30 [INF] Content root path: E:\404\Microservice\ProductMicroService\ProductMicroService.API
+2025-08-08 15:49:08.356 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/_vs/browserLink - null null
+2025-08-08 15:49:08.356 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-08 15:49:08.437 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/_framework/aspnetcore-browser-refresh.js - 200 13798 application/javascript; charset=utf-8 75.4847ms
+2025-08-08 15:49:08.502 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/_vs/browserLink - 200 null text/javascript; charset=UTF-8 156.7622ms
+2025-08-08 15:49:08.538 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-08-08 15:49:08.588 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.8047ms
+2025-08-08 15:49:54.216 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-08-08 15:49:54.265 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.683ms
+2025-08-08 15:50:36.603 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:7182/api/product/GetTest - null null
+2025-08-08 15:50:36.622 +03:30 [INF] Executing endpoint 'ProductMicroService.API.Controller.ProductController.GetTest (ProductMicroService.API)'
+2025-08-08 15:50:36.638 +03:30 [INF] Route matched with {action = "GetTest", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTest() on controller ProductMicroService.API.Controller.ProductController (ProductMicroService.API).
+2025-08-08 15:50:38.310 +03:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-08-08 15:50:38.316 +03:30 [INF] Executed action ProductMicroService.API.Controller.ProductController.GetTest (ProductMicroService.API) in 1671.269ms
+2025-08-08 15:50:38.318 +03:30 [INF] Executed endpoint 'ProductMicroService.API.Controller.ProductController.GetTest (ProductMicroService.API)'
+2025-08-08 15:50:38.320 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:7182/api/product/GetTest - 200 null text/plain; charset=utf-8 1716.9538ms
+2025-08-08 15:52:02.967 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:7182/swagger/v1/swagger.json - null null
+2025-08-08 15:52:02.975 +03:30 [INF] Request finished HTTP/1.1 GET https://localhost:7182/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.2805ms

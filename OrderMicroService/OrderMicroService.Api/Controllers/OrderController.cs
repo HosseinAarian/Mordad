@@ -15,7 +15,7 @@ public class OrderController : ControllerBase
 		_service = service;
 	}
 
-	[HttpGet]
+	[HttpGet("GetAll")]
 	public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
 	[HttpGet("{id}")]

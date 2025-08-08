@@ -41,6 +41,30 @@
       "SwaggerKey": "order"
     }
   ],
+
+  "SwaggerEndPoints": [
+    {
+      "Key": "product",
+      "Config": [
+        {
+          "Name": "Product API",
+          "Version": "v1",
+          "Url": "https://localhost:7182/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "order",
+      "Config": [
+        {
+          "Name": "Order API",
+          "Version": "v1",
+          "Url": "https://localhost:7077/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:7007"
   }
