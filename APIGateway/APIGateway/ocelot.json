@@ -31,6 +31,12 @@
         "PeriodTimespan": 1,
         "Limit": 5
         //ClientWhitelist
+      },
+
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
       }
     },
     {
