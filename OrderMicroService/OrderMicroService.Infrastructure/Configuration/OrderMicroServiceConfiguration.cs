@@ -5,11 +5,13 @@ using OrderMicroServic.Application.Services;
 using OrderMicroService.Domain.Interfaces;
 using OrderMicroService.Infrastructure.Context;
 using OrderMicroService.Infrastructure.Repositories;
+using OrderMicroService.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace OrderMicroService.Infrastructure.Configuration;
 
@@ -25,6 +27,13 @@ public partial class OrderMicroServiceConfiguration
 	private static void ConfigureServices(IServiceCollection services)
 	{
 		services.AddTransient<IOrderService, OrderService>();
+
+		services.AddHttpClient<IProductApiClient, ProductApiClient>(client =>
+		{
+			client.BaseAddress = new Uri("https://localhost:7182/");
+			client.DefaultRequestHeaders.Add("Accept", "application/json");
+		});
+
 	}
 
 	private static void ConfigureRepositories(IServiceCollection services)

@@ -9,10 +9,12 @@ namespace OrderMicroService.Controllers;
 public class OrderController : ControllerBase
 {
 	private readonly IOrderService _service;
+	private readonly IProductApiClient productApiClient;
 
-	public OrderController(IOrderService service)
+	public OrderController(IOrderService service, IProductApiClient productApiClient)
 	{
 		_service = service;
+		this.productApiClient = productApiClient;
 	}
 
 	[HttpGet("GetAll")]
@@ -46,5 +48,21 @@ public class OrderController : ControllerBase
 		await _service.DeleteAsync(id);
 		return NoContent();
 	}
+
+	#region Product APICall
+	[HttpGet("GetProductTest")]
+	public async Task<IActionResult> GetProductTest()
+	{
+		var result = await productApiClient.GetProductTestAsync();
+		return Ok(result);	
+	}
+
+	[HttpGet("GetProductAllTest")]
+	public async Task<IActionResult> GetProductAll()
+	{
+		var resuly = await productApiClient.GetProductAllAsync();
+		return Ok(resuly);
+	}
+	#endregion
 }
 
