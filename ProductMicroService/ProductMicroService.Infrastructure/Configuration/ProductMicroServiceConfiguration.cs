@@ -49,7 +49,6 @@ public partial class ProductMicroServiceConfiguration
 	{
 		try
 		{
-			var x = 13;
 			var servicesScop = app.CreateScope();
 			var services = servicesScop.ServiceProvider;
 			var context = services.GetRequiredService<ProductDBContext>();
