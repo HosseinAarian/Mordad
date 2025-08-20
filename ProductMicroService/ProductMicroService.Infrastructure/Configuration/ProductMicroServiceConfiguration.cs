@@ -48,8 +48,7 @@ public partial class ProductMicroServiceConfiguration
 	public static bool Migrate(IServiceProvider app)
 	{
 		try
-		{
-			var x = 12;
+		{			
 			var servicesScop = app.CreateScope();
 			var services = servicesScop.ServiceProvider;
 			var context = services.GetRequiredService<ProductDBContext>();
