@@ -7,9 +7,13 @@ services:
       - "5000:8080"
     depends_on:
       - product-postgres
+      - rabbitmq
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__ProductMicroServiceConnection=Host=product-postgres;Port=5432;Database=${PRODUCT_DB};Username=${DB_USER};Password=${DB_PASSWORD}
+      - Rabbit__Host=rabbitmq
+      - Rabbit__Username=admin
+      - Rabbit__Password=admin
     networks:
       - micro-network
     env_file:
@@ -40,9 +44,13 @@ services:
       - "5001:8080"
     depends_on:
       - order-postgres
+      - rabbitmq
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__OrderMicroServiceConnection=Host=order-postgres;Port=5432;Database=${ORDER_DB};Username=${DB_USER};Password=${DB_PASSWORD}
+      - Rabbit__Host=rabbitmq
+      - Rabbit__Username=admin
+      - Rabbit__Password=admin
     networks:
       - micro-network
     env_file:
@@ -63,6 +71,18 @@ services:
       - micro-network
     env_file:
       - .env
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"   
+      - "15672:15672" 
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    networks:
+      - micro-network     
 
 volumes:
   pgdata:
