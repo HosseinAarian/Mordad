@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <PackageId>Shared.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>HAMicroServiceProject</Authors>
+    <Company>HAMicroServiceProject</Company>
+    <Description>Shared integration events and DTOs</Description>
+  </PropertyGroup>
+</Project>
