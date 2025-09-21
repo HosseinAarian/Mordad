@@ -39,12 +39,12 @@ if (app.Environment.IsDevelopment() || app.Environment.IsStaging() || app.Enviro
 }
 ProductMicroServiceConfiguration.Migrate(app.Services);
 
-app.MapPost("/products", async (IMessageBus bus, ProductCreated req) =>
-{
-	var evt = new ProductCreated(req.OrderId, req.Name, req.Description, req.Price, req.Quantity, DateTime.UtcNow);
-	await bus.PublishAsync(evt, "products.exchange", "products.created");
-	return Results.Accepted($"/products/{evt.OrderId}");
-});
+//app.MapPost("/products", async (IMessageBus bus, ProductCreated req) =>
+//{
+//	var evt = new ProductCreated(req.OrderId, req.Name, req.Description, req.Price, req.Quantity, DateTime.UtcNow);
+//	await bus.PublishAsync(evt, "products.exchange", "products.created");
+//	return Results.Accepted($"/products/{evt.OrderId}");
+//});
 
 app.UseSwagger();
 app.UseSwaggerUI();

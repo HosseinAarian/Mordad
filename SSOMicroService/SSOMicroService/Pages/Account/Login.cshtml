@@ -1,0 +1,28 @@
+﻿@page
+@model SSOMicroService.Pages.Account.LoginModel
+@{
+}
+
+<form method="post">
+	<input type="hidden" asp-for="InputModel.ReturnUrl" />
+	<div class="row">
+		<div class="col-12">
+			<div class="form-group">
+				<label class="form-label" asp-for="InputModel.Email"></label>
+				<input class="form-control" asp-for="InputModel.Email" />
+				<span asp-validation-for="InputModel.Email"></span>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="form-group">
+				<label class="form-label" asp-for="InputModel.Password"></label>
+				<input class="form-control" asp-for="InputModel.Password" />
+				<span asp-validation-for="InputModel.Password"></span>
+			</div>
+		</div>
+		<div class="col-12">
+			<button class="btn btn-success w-100 py-2" type="submit">Sign in</button>
+		</div>
+	</div>
+
+</form>
