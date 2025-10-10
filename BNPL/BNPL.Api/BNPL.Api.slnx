@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../BNPL.Application/BNPL.Application.csproj" />
+  <Project Path="../BNPL.Domain/BNPL.Domain.csproj" />
+  <Project Path="../BNPL.Infrastructure.Repository/BNPL.Infrastructure.Repository.csproj" />
+  <Project Path="BNPL.Api.csproj" />
+</Solution>
